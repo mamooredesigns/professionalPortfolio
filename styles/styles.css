@@ -19,6 +19,20 @@ body {
     "footer";
 }
 
+h1 {
+  font-size: 40pt;
+  color: #2f3753;
+  padding: 2% 10%;
+  text-align: center;
+  width: inherit;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: inherit;
+  padding: 2%;
+}
+
 /* Navigation and Links */
 nav {
   grid-area: "nav";
@@ -123,11 +137,17 @@ li:last-of-type {
   float: left;
 }
 
+.about {
+  margin: 0 10%;
+  width: 80vw;
+  height: 80vh;
+}
+
 #about #headshot {
   width: 200px;
   height: auto;
   position: relative;
-  margin: 6% 1.5% 6% 3%;
+  margin: 6% 6% 6% 0;
   padding: 10px 0;
   float: left;
 }
@@ -148,62 +168,73 @@ li:last-of-type {
   height: 99vh;
 }
 
-/* Apps section on home */
-#apps {
-  grid-area: "apps";
-  background-color: #68130e;
-  background-size: cover;
-  height: 99vh;
-}
-
-/* Footer section on home and secondary pages */
-#footer {
-  grid-area: "footer";
-  background-color: #303753;
-  background-size: cover;
-  height: 30vh;
-}
-
-.content {
-  background-color: rgba(255, 255, 255, 0.5);
-  height: inherit;
-  padding: 2%;
-}
-
-h1 {
-  font-size: 40pt;
-  color: #2f3753;
-  padding: 2% 10%;
-  text-align: center;
-  width: inherit;
-}
-
-#links {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 14pt;
-  text-align: center;
-}
-
-#previews {
+#designPreviews {
   display: grid;
   grid-template-columns: repeat(3, 30vw);
-  height: 50vh;
+  height: 425px;
   gap: 2vw;
-  grid-template-areas: "left center right";
+  grid-template-areas: "designLeft designCenter designRight";
   align-content: space-between;
 }
 
-img.preview {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
+a.designLeft {
+  position: relative;
+  grid-area: "designLeft";
+  padding: 25px;
+  align-self: center;
+  justify-self: center;
 }
 
+a.designCenter {
+  grid-area: "designCenter";
+  padding: 25px;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+a.designRight {
+  grid-area: "designRight";
+  padding: 25px;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.designPreview {
+  width: 450px;
+  height: 350px;
+  margin: 0 auto;
+  justify-self: center;
+  background-color: white;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+.designPreview img {
+  margin: 2% 25px;
+  border-radius: 5%;
+}
+
+.designPreview p {
+  padding: 5%;
+  text-align: center;
+  color: #303753;
+}
+
+a.designLeft:hover div.designPreview,
+a.designCenter:hover div.designPreview,
+a.designRight:hover div.designPreview {
+  opacity: 0.5;
+}
+
+a.designLeft:hover .middle,
+a.designCenter:hover .middle,
+a.designRight:hover .middle {
+  opacity: 1;
+}
+
+/* Hover effect on preview cards */
 .middle {
   width: inherit;
   height: inherit;
@@ -215,18 +246,6 @@ img.preview {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
-
-a.left:hover div.preview,
-a.center:hover div.preview,
-a.right:hover div.preview {
-  opacity: 0.5;
-}
-
-a.left:hover .middle,
-a.center:hover .middle,
-a.right:hover .middle {
-  opacity: 1;
 }
 
 .text {
@@ -249,52 +268,102 @@ a.right:hover .middle {
   margin: 18%;
 }
 
-a.left {
+/* Apps section on home */
+#apps {
+  grid-area: "apps";
+  background-color: #68130e;
+  background-size: cover;
+  height: 99vh;
+}
+
+#appPreviews {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 425px;
+  width: 80%;
+  gap: 5%;
+  grid-template-areas: "appLeft appRight";
+  align-content: space-between;
+  margin: 0 10%;
+  /* display: inline; */
+}
+
+a.appLeft {
   position: relative;
-  grid-area: "left";
+  grid-area: "appLeft";
   padding: 25px;
+  /* width: 50%; */
   align-self: center;
   justify-self: center;
 }
 
-.preview p {
+a.appRight {
+  grid-area: "appRight";
+  padding: 25px;
+  /* width: 50%; */
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.appPreview {
+  width: 450px;
+  height: 350px;
+  margin: 0 auto;
+  justify-self: center;
+  background-color: white;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+.appPreview img {
+  margin: 2% 25px;
+  border-radius: 5%;
+}
+
+.appPreview p {
   padding: 5%;
   text-align: center;
   color: #303753;
 }
 
-.preview img {
-  margin: 2% 25px;
-  border-radius: 5%;
+a.appLeft:hover div.appPreview,
+a.appRight:hover div.appPreview {
+  opacity: 0.5;
 }
 
-a.center {
-  grid-area: "center";
-  padding: 25px;
-  align-self: center;
-  justify-self: center;
+a.appLeft:hover .middle,
+a.appRight:hover .middle {
+  opacity: 1;
+}
+
+#caption {
+  font-size: 12pt;
+  color: lightgray;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
   position: relative;
+  top: -10px;
+  left: 0px;
 }
 
-a.right {
-  grid-area: "right";
-  padding: 25px;
-  align-self: center;
-  justify-self: center;
-  position: relative;
+/* Footer section on home and secondary pages */
+#footer {
+  grid-area: "footer";
+  background-color: #303753;
+  background-size: cover;
+  height: 30vh;
 }
 
-.preview {
-  /* display: block; */
-  width: 450px;
-  height: 350px;
-  /* width: auto; */
-  /* max-height: 33vh; */
-  margin: 0 auto;
-  justify-self: center;
-  background-color: white;
-  box-shadow: 10px 10px 5px grey;
-  border-radius: 5%;
+/* See More/Back to Top links */
+#links {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 14pt;
+  text-align: center;
+  position: auto auto 15px auto;
 }
 
 #resumePageContent {
