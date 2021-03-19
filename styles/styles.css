@@ -1,3 +1,4 @@
+/* Clear presets */
 * {
   margin: 0;
   padding: 0;
@@ -8,23 +9,17 @@
   box-sizing: border-box;
 }
 
-a {
-  font-family: serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-  color: #2f3753;
-  text-shadow: -1px -1px 0 #aa8f66, 1px -1px 0 #aa8f66, -1px 1px 0 #aa8f66,
-    1px 1px 0 #aa8f66;
-}
-
 body {
   display: grid;
   grid-template-areas:
     "nav"
-    "about";
+    "about"
+    "designs"
+    "apps"
+    "footer";
 }
 
+/* Navigation and Links */
 nav {
   grid-area: "nav";
   width: 100%;
@@ -44,16 +39,11 @@ li {
   position: relative;
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-li:first-of-type,
-li:last-of-type {
-  height: 15vh;
+a {
+  font-family: serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2f3753;
 }
 
 #navLinkAbout,
@@ -69,26 +59,71 @@ li:last-of-type {
   text-transform: none;
 }
 
+/* to veritcally center nav links in hero on home */
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* to vertically center block of links in hero on home */
+li:first-of-type,
+li:last-of-type {
+  height: 15vh;
+}
+
+/* Navigation and Links on secondary pages */
+.secondaryNav {
+  background-color: #303753;
+  width: 100%;
+  height: 40px;
+}
+
+.secondaryNav ul {
+  float: right;
+  width: 40%;
+}
+
+.secondaryNav li,
+.secondaryNav li:first-of-type,
+.secondaryNav li:last-of-type {
+  display: inline-block;
+  height: 10vh;
+  width: 24%;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.secondaryNav a {
+  color: white;
+  font-size: 16pt;
+}
+
+/* Canvas for animation in hero on home */
 #navCanvas {
   width: 75%;
   height: inherit;
   float: left;
 }
 
+/* 
 #blogIFrame {
   width: 100vw;
   height: 100vh;
 }
+ */
 
+/* About section on home */
 #about {
   grid-area: "about";
-  background-image: url("../images/blueChevron.jpg");
+  background-color: #303753;
   background-size: cover;
   height: 99vh;
   float: left;
 }
 
-#headshot {
+#about #headshot {
   width: 200px;
   height: auto;
   position: relative;
@@ -105,24 +140,28 @@ li:last-of-type {
   color: #2f3753;
 }
 
+/* Designs section on home */
 #designs {
   grid-area: "designs";
-  background-image: url("../images/goldChevron.jpg");
+  background-color: #aa8e66;
   background-size: cover;
   height: 99vh;
 }
 
+/* Apps section on home */
 #apps {
   grid-area: "apps";
-  background-image: url("../images/darkChevron.png");
+  background-color: #68130e;
   background-size: cover;
   height: 99vh;
 }
 
-.extLink {
-  font-size: 50px;
-  text-align: center;
-  padding: 0 auto;
+/* Footer section on home and secondary pages */
+#footer {
+  grid-area: "footer";
+  background-color: #303753;
+  background-size: cover;
+  height: 30vh;
 }
 
 .content {
@@ -156,7 +195,7 @@ h1 {
   align-content: space-between;
 }
 
-iframe, img.preview {
+img.preview {
   opacity: 1;
   display: block;
   width: 100%;
@@ -178,33 +217,55 @@ iframe, img.preview {
   text-align: center;
 }
 
-a.left:hover iframe, a.center:hover img.preview, a.right:hover img.preview {
+a.left:hover div.preview,
+a.center:hover div.preview,
+a.right:hover div.preview {
   opacity: 0.5;
 }
 
-a.left:hover .middle, a.center:hover .middle, a.right:hover .middle {
+a.left:hover .middle,
+a.center:hover .middle,
+a.right:hover .middle {
   opacity: 1;
 }
 
 .text {
-  width: inherit;
-  height: inherit;
-  background-color: white;
-  font-size: 14px;
-  padding: 42px 56px;
-  font-family: serif;
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+  background-color: rgba(48, 55, 83, 0.5);
+  font-size: 18px;
+  padding: 42px 42px;
+  font-family: sans-serif;
   text-transform: none;
   font-weight: 600;
-  color: #2f3753;
+  color: white;
+}
+
+.text p {
+  display: block;
+  background-color: #303753;
+  padding: 42px 42px;
+  margin: 18%;
 }
 
 a.left {
   position: relative;
-  /* width: 50%; */
   grid-area: "left";
   padding: 25px;
   align-self: center;
   justify-self: center;
+}
+
+.preview p {
+  padding: 5%;
+  text-align: center;
+  color: #303753;
+}
+
+.preview img {
+  margin: 2% 25px;
+  border-radius: 5%;
 }
 
 a.center {
@@ -223,16 +284,43 @@ a.right {
   position: relative;
 }
 
-iframe {
-  height: 33vh;
-  width: 30vw;
-  margin: auto;
-  justify-self: center;
-}
-
-img.preview {
-  width: auto;
-  max-height: 33vh;
+.preview {
+  /* display: block; */
+  width: 450px;
+  height: 350px;
+  /* width: auto; */
+  /* max-height: 33vh; */
   margin: 0 auto;
   justify-self: center;
+  background-color: white;
+  box-shadow: 10px 10px 5px grey;
+  border-radius: 5%;
+}
+
+#resumePageContent {
+  width: 80%;
+  margin: 0 10% 3% 10%;
+}
+
+#resumePageContent h1 {
+  font-size: 28pt;
+  color: #303753;
+  padding: 2% 10%;
+  margin: 0 auto;
+  text-align: center;
+  width: inherit;
+}
+
+#resumePageContent #headshot {
+  margin: 0;
+  padding: 0;
+}
+
+.contentPara {
+  /* padding: 5% 15%; */
+  margin: 0 1.5% 0 25%;
+  padding: 7.5% 0 0 0;
+  font-family: sans-serif;
+  font-size: 16pt;
+  color: #2f3753;
 }

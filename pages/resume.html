@@ -10,10 +10,33 @@
       content="Professional Portfolio to showcase work and skills of Mary Alice Moore"
     />
     <meta name="keywords" content="web design, web development, portfolio, Mary Alice Moore" />
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css" />
   </head>
   
   <body>
-    <h1>RESUME PAGE</h1>
+    <nav class="secondaryNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" style="color: #aa8e66;">About</a></li>
+        <!-- <li><a>Designs</a></li>
+        <li><a>Apps</a></li> -->
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="resumePageContent">
+      <h1> About Me </h1>
+      <img id="headshot" src="../images/headshot.png">
+
+      <p class="contentPara">Thank you for looking further into my credentials! Below is my resume, feel free to review and/or download it for your records. If you would like to see examples of my work please visit my <a href="portfolio.html">Portfolio</a> page, or if you are ready to contact me about working for you, visit my <a href="contact.html">Contact</a> page.</p>
+    </div>
+
+    <iframe src="../docs/Moore Resume.pdf" title="Mary Alice Moore Resume" height="500px" width="70%" style="margin: 0 15% 3% 15%; border: 1px solid black;"></iframe>
+
+    <footer id="footer">
+      <a class="extLink" href="blog.html">Blog</a>
+    </footer>
+
   </body>
 </html>
