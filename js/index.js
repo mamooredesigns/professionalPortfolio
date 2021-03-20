@@ -103,7 +103,23 @@ document.getElementById("navLinkContact").addEventListener("mouseleave", functio
         canvasSpace.removeChild(canvas);
     })
 
+//Create a sticky nav on home page scroll//
+window.onscroll = function() {myFunction()};
 
+var header = document.getElementById("stickyNav");
+
+var sticky = header.offsetTop;
+header.style.visibility = "hidden";
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.style.visibility = "visible";
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+    header.style.visibility = "hidden";
+  }
+}
 
 
 

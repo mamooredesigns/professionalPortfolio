@@ -10,6 +10,7 @@
 }
 
 body {
+  background-color: #303753;
   display: grid;
   grid-template-areas:
     "nav"
@@ -37,8 +38,8 @@ h2 {
 
 .content {
   background-color: rgba(255, 255, 255, 0.5);
-  height: inherit;
-  padding: 2%;
+  height: 110vh;
+  padding: 10% 2% 2% 2%;
 }
 
 /* Navigation and Links */
@@ -123,6 +124,47 @@ li:last-of-type {
   font-size: 16pt;
 }
 
+/* Sticky Nav on Scroll */
+#stickyNav {
+  background-color: #303753;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  padding: 1%;
+  visibility: hidden;
+}
+
+#stickyNav ul {
+  float: right;
+  width: 40%;
+}
+
+#stickyNav li,
+#stickyNav li:first-of-type,
+#stickyNav li:last-of-type {
+  display: inline-block;
+  height: 10vh;
+  width: 24%;
+  text-align: center;
+  padding-top: 8px;
+}
+
+#stickyNav a {
+  color: white;
+  font-size: 16pt;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + #stickyNav {
+  padding-top: 10%;
+}
+
 /* Canvas for animation in hero on home */
 #navCanvas {
   width: 75%;
@@ -142,7 +184,7 @@ li:last-of-type {
   grid-area: "about";
   background-color: #303753;
   background-size: cover;
-  height: 99vh;
+  height: 110vh;
   float: left;
 }
 
@@ -174,7 +216,7 @@ li:last-of-type {
   grid-area: "designs";
   background-color: #aa8e66;
   background-size: cover;
-  height: 99vh;
+  height: 110vh;
 }
 
 #designPreviews {
@@ -282,7 +324,7 @@ a.designRight:hover .middle {
   grid-area: "apps";
   background-color: #68130e;
   background-size: cover;
-  height: 99vh;
+  height: 110vh;
 }
 
 #appPreviews {
