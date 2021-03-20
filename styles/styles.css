@@ -27,6 +27,14 @@ h1 {
   width: inherit;
 }
 
+h2 {
+  font-size: 28pt;
+  color: #2f3753;
+  padding: 2% 10%;
+  text-align: center;
+  width: inherit;
+}
+
 .content {
   background-color: rgba(255, 255, 255, 0.5);
   height: inherit;
@@ -91,7 +99,8 @@ li:last-of-type {
 .secondaryNav {
   background-color: #303753;
   width: 100%;
-  height: 40px;
+  height: 70px;
+  padding: 1%;
 }
 
 .secondaryNav ul {
@@ -354,6 +363,7 @@ a.appRight:hover .middle {
   background-color: #303753;
   background-size: cover;
   height: 30vh;
+  color: white;
 }
 
 /* See More/Back to Top links */
@@ -381,8 +391,10 @@ a.appRight:hover .middle {
 }
 
 #resumePageContent #feature {
+  position: relative;
+  float: left;
   margin: 0;
-  padding: 0;
+  padding: 0 5% 0 5%;
 }
 
 .contentPara {
@@ -395,7 +407,10 @@ a.appRight:hover .middle {
 }
 
 #battleshipLandingContent #feature,
-#weatherLandingContent #feature {
+#weatherLandingContent #feature,
+#christmasTownLandingContent #feature,
+#crsnLandingContent #feature,
+#psLandingContent #feature {
   position: relative;
   float: left;
   margin: 0;
@@ -403,7 +418,39 @@ a.appRight:hover .middle {
 }
 
 #battleshipLandingContent p.contentPara,
-#weatherLandingContent p.contentPara {
+#weatherLandingContent p.contentPara,
+#christmasTownLandingContent p.contentPara,
+#crsnLandingContent p.contentPara,
+#psLandingContent p.contentPara {
   margin: 0;
   padding: 2% 5%;
+}
+
+#breadcrumbs {
+  background-color: #aa8e66;
+  color: #303753;
+  font-size: 14pt;
+  padding: 0.5%;
+}
+
+#breadcrumbs a {
+  display: inline;
+  float: left;
+  color: #303753;
+  font-size: 14pt;
+}
+
+.gallery {
+  width: 50%;
+  margin: 0 25%;
+}
+
+.gallery h2 {
+  width: 100%;
+}
+
+#gallery {
+  max-width: 100%;
+  height: auto;
+  margin: 2.5% auto;
 }
