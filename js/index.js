@@ -121,7 +121,15 @@ function myFunction() {
   }
 }
 
-
+//Hamburger Menu Navigation//
+function toggle() {
+    var burgerLinks = document.getElementById("burgerLinks");
+    if (burgerLinks.style.display === "block") {
+        burgerLinks.style.display = "none";
+    } else {
+        burgerLinks.style.display = "block"
+    }
+}
 
 
 //attempts at animations....
