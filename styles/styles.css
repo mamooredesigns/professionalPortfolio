@@ -20,16 +20,8 @@
       "footer";
   }
 
-  nav {
-    display: none;
-  }
-
-  #stickyNav {
-    display: none;
-  }
-
   h1 {
-    font-size: 40pt;
+    font-size: 28pt;
     color: #2f3753;
     padding: 2% 10%;
     text-align: center;
@@ -37,7 +29,7 @@
   }
 
   h2 {
-    font-size: 28pt;
+    font-size: 18pt;
     color: #2f3753;
     padding: 2% 10%;
     text-align: center;
@@ -46,8 +38,20 @@
 
   .content {
     background-color: rgba(255, 255, 255, 0.5);
-    height: 110vh;
+    height: 158vh;
     padding: 2% 2% 2% 2%;
+  }
+
+  #designs .content {
+    height: 165vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #stickyNav {
+    display: none;
   }
 
   /* Hamburger Nav */
@@ -62,6 +66,7 @@
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1000;
   }
 
   .hamburgerNav #burger {
@@ -119,11 +124,18 @@
     text-decoration: none;
   }
 
+  /* About Section of Mobile */
+  #about {
+    grid-area: "about";
+    background-color: rgba(48, 55, 83, 0.5);
+    height: 92vh;
+  }
+
   #headshot {
     width: 33%;
     height: auto;
     float: left;
-    margin: 0 5% 5% 0;
+    margin: 5% 5% 5% 0;
   }
 
   #about p {
@@ -133,10 +145,173 @@
     font-size: 14pt;
     color: #2f3753;
   }
+
+  #about p:first-of-type {
+    padding-top: 5%;
+  }
+
+  #about p:nth-of-type(2) {
+    display: none;
+  }
+
+  /* See More/Back to Top links */
+  #links {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    position: auto auto 15px auto;
+  }
+
+  /* Designs Section of Mobile */
+  #designs {
+    grid-area: "designs";
+    background-color: #aa8e66;
+    height: 165vh;
+  }
+
+  #designPreviews {
+    display: grid;
+    grid-template-areas:
+      "designLeft"
+      "designCenter"
+      "designRight";
+    align-content: space-between;
+  }
+
+  #designPreviews a {
+    background-color: #aa8e66;
+    margin: 3%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.designLeft,
+  a.designCenter,
+  a.designRight {
+    text-decoration: none;
+    color: white;
+  }
+
+  .designPreview {
+    margin: 0;
+    width: 80vw;
+  }
+
+  .designPreview img {
+    margin: 2% 5%;
+  }
+
+  #photoshop {
+    padding: 2% 8%;
+  }
+
+  .designPreview p {
+    text-align: center;
+    width: 87vw;
+    margin: 0 0 3% 0;
+  }
+
+  /* Remove hover effect on preview cards */
+  .middle {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  /* Apps Section for Mobile */
+  #apps {
+    grid-area: "apps";
+    background-color: #68130e;
+    height: 127vh;
+  }
+
+  #appPreviews {
+    display: grid;
+    grid-template-areas:
+      "appLeft"
+      "appRight";
+    align-content: space-between;
+  }
+
+  #appPreviews a {
+    background-color: #68130e;
+    margin: 3%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.appLeft {
+    grid-area: "appLeft";
+    text-decoration: none;
+  }
+
+  a.appRight {
+    grid-area: "appRight";
+    text-decoration: none;
+  }
+
+  .appPreview {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .appPreview img {
+    margin: 3% 0 2% 0;
+  }
+
+  #weather {
+    margin: 3% 13% 2% 13%;
+  }
+
+  .appPreview p {
+    padding: 5%;
+    text-align: center;
+    color: white;
+  }
+
+  a.appLeft:hover div.appPreview,
+  a.appRight:hover div.appPreview {
+    opacity: 0.5;
+  }
+
+  a.appLeft:hover .middle,
+  a.appRight:hover .middle {
+    opacity: 1;
+  }
+
+  #caption {
+    font-size: 10pt;
+    color: rgba(211, 211, 211, 0.75);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  #footer {
+    grid-area: "footer";
+    background-color: #303753;
+    background-size: cover;
+    height: 30vh;
+    color: white;
+  }
+
+  #footer a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 /* Styling for Tablet */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   body {
     display: grid;
     grid-template-areas:
@@ -145,6 +320,297 @@
       "designs"
       "apps"
       "footer";
+  }
+
+  h1 {
+    font-size: 28pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  h2 {
+    font-size: 18pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 155vh;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #designs .content {
+    height: 175vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #stickyNav {
+    display: none;
+  }
+
+  /* Hamburger Nav */
+  .hamburgerNav {
+    background-color: #303753;
+    width: 100%;
+    height: 50px;
+    padding: 1%;
+    color: white;
+    font-size: 200%;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .hamburgerNav #burger {
+    width: 35px;
+    height: 40px;
+    float: right;
+    padding: 0 2% 0 0;
+  }
+
+  .hamburgerNav #bar {
+    border-bottom: 3px solid rgba(255, 255, 255);
+    height: 10px;
+    width: 25px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    margin: 0 2% 0 0;
+  }
+
+  #burgerLinks {
+    display: none;
+    width: 33%;
+    background-color: #303753;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #burgerLinks li,
+  #burgerLinks li:first-of-type,
+  #burgerLinks li:last-of-type {
+    display: block;
+    padding: 0 0 5% 10%;
+  }
+
+  #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 10px;
+    width: 25px;
+    font-family: sans-serif;
+    font-size: 200%;
+  }
+
+  #burgerLinks li:nth-of-type(2) {
+    padding-top: 40px;
+  }
+
+  #burgerLinks a {
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+  }
+
+  /* About Section of Tablet */
+  #about {
+    grid-area: "about";
+    background-color: rgba(48, 55, 83, 0.5);
+    height: 85vh;
+  }
+
+  #headshot {
+    width: 33%;
+    height: auto;
+    float: left;
+    margin: 5% 5% 5% 0;
+  }
+
+  #about p {
+    margin: 0 1.5% 0 3%;
+    padding: 0 0 2% 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #2f3753;
+  }
+
+  #about p:first-of-type {
+    padding-top: 5%;
+  }
+
+  #about p:nth-of-type(2) {
+    display: none;
+  }
+
+  /* See More/Back to Top links */
+  #links {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    position: auto auto 15px auto;
+  }
+
+  /* Designs Section of Tablet */
+  #designs {
+    grid-area: "designs";
+    background-color: #aa8e66;
+    height: 175vh;
+  }
+
+  #designPreviews {
+    display: grid;
+    grid-template-areas:
+      "designLeft"
+      "designCenter"
+      "designRight";
+    align-content: space-between;
+  }
+
+  #designPreviews a {
+    background-color: #aa8e66;
+    margin: 3% auto;
+    width: 65vw;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.designLeft,
+  a.designCenter,
+  a.designRight {
+    text-decoration: none;
+    color: white;
+  }
+
+  .designPreview {
+    margin: 0;
+    width: 65vw;
+  }
+
+  .designPreview img {
+    margin: 2% 10%;
+  }
+
+  #photoshop {
+    padding: 2% 8%;
+  }
+
+  .designPreview p {
+    text-align: center;
+    width: 65vw;
+    margin: 0 0 3% 0;
+  }
+
+  /* Remove hover effect on preview cards */
+  .middle {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  /* Apps Section for Tablet */
+  #apps {
+    grid-area: "apps";
+    background-color: #68130e;
+    height: 137vh;
+  }
+
+  #appPreviews {
+    display: grid;
+    grid-template-areas:
+      "appLeft"
+      "appRight";
+    align-content: space-between;
+  }
+
+  #appPreviews a {
+    background-color: #68130e;
+    margin: 3% auto;
+    width: 65vw;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.appLeft {
+    grid-area: "appLeft";
+    text-decoration: none;
+  }
+
+  a.appRight {
+    grid-area: "appRight";
+    text-decoration: none;
+  }
+
+  .appPreview {
+    width: 65vw;
+    margin: 0 auto;
+  }
+
+  .appPreview img {
+    margin: 3% 10% 2% 10%;
+  }
+
+  #weather {
+    margin: 3% 20% 2% 20%;
+  }
+
+  .appPreview p {
+    padding: 5%;
+    text-align: center;
+    color: white;
+  }
+
+  a.appLeft:hover div.appPreview,
+  a.appRight:hover div.appPreview {
+    opacity: 0.5;
+  }
+
+  a.appLeft:hover .middle,
+  a.appRight:hover .middle {
+    opacity: 1;
+  }
+
+  #caption {
+    font-size: 10pt;
+    color: rgba(211, 211, 211, 0.75);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  #footer {
+    grid-area: "footer";
+    background-color: #303753;
+    background-size: cover;
+    height: 30vh;
+    color: white;
+  }
+
+  #footer a {
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -413,6 +879,10 @@
     border-radius: 5%;
   }
 
+  #photoshop {
+    margin: 2% 56px;
+  }
+
   .designPreview p {
     padding: 5%;
     text-align: center;
@@ -516,6 +986,10 @@
   .appPreview img {
     margin: 2% 25px;
     border-radius: 5%;
+  }
+
+  #weather {
+    margin: 2% 75px;
   }
 
   .appPreview p {
