@@ -107,8 +107,9 @@ document.getElementById("navLinkContact").addEventListener("mouseleave", functio
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("stickyNav");
+var about = document.getElementById("about")
 
-var sticky = header.offsetTop;
+var sticky = about.offsetTop;
 header.style.visibility = "hidden";
 
 function myFunction() {

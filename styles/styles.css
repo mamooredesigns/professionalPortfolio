@@ -54,6 +54,10 @@
     display: none;
   }
 
+  #secondaryStickyNav {
+    display: none;
+  }
+
   /* Hamburger Nav */
   .hamburgerNav {
     background-color: #303753;
@@ -66,7 +70,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .hamburgerNav #burger {
@@ -308,6 +312,46 @@
     color: white;
     text-decoration: none;
   }
+
+  #breadcrumbs {
+    background-color: #aa8e66;
+    color: #303753;
+    font-size: 14pt;
+    padding: 0.5%;
+    position: fixed;
+    top: 7%;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #breadcrumbs a {
+    display: inline;
+    float: left;
+    color: #303753;
+    font-size: 14pt;
+  }
+
+  #resumePageContent {
+    padding-top: 15%;
+  }
+
+  .gallery,
+  .gallery h2 {
+    width: 100%;
+  }
+
+  .gallery iframe,
+  .gallery img,
+  #crsnIFrame,
+  #christmasIFrame {
+    width: 80%;
+  }
+
+  #gallery {
+    max-width: 100%;
+    height: auto;
+    margin: 2.5% auto;
+  }
 }
 
 /* Styling for Tablet */
@@ -356,6 +400,10 @@
     display: none;
   }
 
+  #secondaryStickyNav {
+    display: none;
+  }
+
   /* Hamburger Nav */
   .hamburgerNav {
     background-color: #303753;
@@ -368,7 +416,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .hamburgerNav #burger {
@@ -612,12 +660,34 @@
     color: white;
     text-decoration: none;
   }
+
+  #breadcrumbs {
+    background-color: #aa8e66;
+    color: #303753;
+    font-size: 14pt;
+    padding: 0.5%;
+    position: fixed;
+    top: 7%;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #breadcrumbs a {
+    display: inline;
+    float: left;
+    color: #303753;
+    font-size: 14pt;
+  }
+
+  #resumePageContent {
+    padding-top: 13%;
+  }
 }
 
 /* Styling for Desktop */
 @media only screen and (min-width: 768px) {
   body {
-    background-color: #303753;
+    background-color: white;
     display: grid;
     grid-template-areas:
       "nav"
@@ -741,19 +811,35 @@
     background-color: #303753;
     width: 100%;
     height: 70px;
-    z-index: 1000;
+    z-index: 1001;
     padding: 1%;
     visibility: hidden;
   }
 
-  #stickyNav ul {
+  #secondaryStickyNav {
+    background-color: #303753;
+    width: 100%;
+    height: 70px;
+    z-index: 1001;
+    padding: 1%;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #stickyNav ul,
+  #secondaryStickyNav ul {
     float: right;
     width: 40%;
   }
 
   #stickyNav li,
   #stickyNav li:first-of-type,
-  #stickyNav li:last-of-type {
+  #stickyNav li:last-of-type,
+  #secondaryStickyNav li,
+  #secondaryStickyNav li:first-of-type,
+  #secondaryStickyNav li:last-of-type {
     display: inline-block;
     height: 10vh;
     width: 24%;
@@ -761,12 +847,13 @@
     padding-top: 8px;
   }
 
-  #stickyNav a {
+  #stickyNav a,
+  #secondaryStickyNav a {
     color: white;
     font-size: 16pt;
   }
 
-  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  /* The sticky class is added to the sticky nav with JS when it reaches its scroll position */
   .sticky {
     position: fixed;
     top: 0;
@@ -1038,16 +1125,22 @@
     position: auto auto 15px auto;
   }
 
-  #resumePageContent {
+  #resumePageContent,
+  #christmasTownLandingContent,
+  #battleshipLandingContent,
+  #weatherLandingContent,
+  #crsnLandingContent,
+  #psLandingContent {
     width: 80%;
-    margin: 0 10% 3% 10%;
+    margin: 10% 10% 3% 10%;
+    background-color: white;
   }
 
   #resumePageContent h1 {
     font-size: 28pt;
     color: #303753;
     padding: 2% 10%;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
     text-align: center;
     width: inherit;
   }
@@ -1093,6 +1186,10 @@
     color: #303753;
     font-size: 14pt;
     padding: 0.5%;
+    position: fixed;
+    top: 9.5%;
+    width: 100%;
+    z-index: 1000;
   }
 
   #breadcrumbs a {
