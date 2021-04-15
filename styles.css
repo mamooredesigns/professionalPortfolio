@@ -1,0 +1,1119 @@
+/* Clear presets */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Styling for Mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "about"
+      "designs"
+      "apps"
+      "footer";
+  }
+
+  h1 {
+    font-size: 28pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  h2 {
+    font-size: 18pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 158vh;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #designs .content {
+    height: 165vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #stickyNav {
+    display: none;
+  }
+
+  /* Hamburger Nav */
+  .hamburgerNav {
+    background-color: #303753;
+    width: 100%;
+    height: 50px;
+    padding: 1%;
+    color: white;
+    font-size: 200%;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .hamburgerNav #burger {
+    width: 35px;
+    height: 40px;
+    float: right;
+    padding: 0 2% 0 0;
+  }
+
+  .hamburgerNav #bar {
+    border-bottom: 3px solid rgba(255, 255, 255);
+    height: 10px;
+    width: 25px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    margin: 0 2% 0 0;
+  }
+
+  #burgerLinks {
+    display: none;
+    width: 33%;
+    background-color: #303753;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #burgerLinks li,
+  #burgerLinks li:first-of-type,
+  #burgerLinks li:last-of-type {
+    display: block;
+    padding: 0 0 5% 10%;
+  }
+
+  #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 10px;
+    width: 25px;
+    font-family: sans-serif;
+    font-size: 200%;
+  }
+
+  #burgerLinks li:nth-of-type(2) {
+    padding-top: 40px;
+  }
+
+  #burgerLinks a {
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+  }
+
+  /* About Section of Mobile */
+  #about {
+    grid-area: "about";
+    background-color: rgba(48, 55, 83, 0.5);
+    height: 92vh;
+  }
+
+  #headshot {
+    width: 33%;
+    height: auto;
+    float: left;
+    margin: 5% 5% 5% 0;
+  }
+
+  #about p {
+    margin: 0 1.5% 0 3%;
+    padding: 0 0 2% 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #2f3753;
+  }
+
+  #about p:first-of-type {
+    padding-top: 5%;
+  }
+
+  #about p:nth-of-type(2) {
+    display: none;
+  }
+
+  /* See More/Back to Top links */
+  #links {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    position: auto auto 15px auto;
+  }
+
+  /* Designs Section of Mobile */
+  #designs {
+    grid-area: "designs";
+    background-color: #aa8e66;
+    height: 165vh;
+  }
+
+  #designPreviews {
+    display: grid;
+    grid-template-areas:
+      "designLeft"
+      "designCenter"
+      "designRight";
+    align-content: space-between;
+  }
+
+  #designPreviews a {
+    background-color: #aa8e66;
+    margin: 3%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.designLeft,
+  a.designCenter,
+  a.designRight {
+    text-decoration: none;
+    color: white;
+  }
+
+  .designPreview {
+    margin: 0;
+    width: 80vw;
+  }
+
+  .designPreview img {
+    margin: 2% 5%;
+  }
+
+  #photoshop {
+    padding: 2% 8%;
+  }
+
+  .designPreview p {
+    text-align: center;
+    width: 87vw;
+    margin: 0 0 3% 0;
+  }
+
+  /* Remove hover effect on preview cards */
+  .middle {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  /* Apps Section for Mobile */
+  #apps {
+    grid-area: "apps";
+    background-color: #68130e;
+    height: 127vh;
+  }
+
+  #appPreviews {
+    display: grid;
+    grid-template-areas:
+      "appLeft"
+      "appRight";
+    align-content: space-between;
+  }
+
+  #appPreviews a {
+    background-color: #68130e;
+    margin: 3%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.appLeft {
+    grid-area: "appLeft";
+    text-decoration: none;
+  }
+
+  a.appRight {
+    grid-area: "appRight";
+    text-decoration: none;
+  }
+
+  .appPreview {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .appPreview img {
+    margin: 3% 0 2% 0;
+  }
+
+  #weather {
+    margin: 3% 13% 2% 13%;
+  }
+
+  .appPreview p {
+    padding: 5%;
+    text-align: center;
+    color: white;
+  }
+
+  a.appLeft:hover div.appPreview,
+  a.appRight:hover div.appPreview {
+    opacity: 0.5;
+  }
+
+  a.appLeft:hover .middle,
+  a.appRight:hover .middle {
+    opacity: 1;
+  }
+
+  #caption {
+    font-size: 10pt;
+    color: rgba(211, 211, 211, 0.75);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  #footer {
+    grid-area: "footer";
+    background-color: #303753;
+    background-size: cover;
+    height: 30vh;
+    color: white;
+  }
+
+  #footer a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Styling for Tablet */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "about"
+      "designs"
+      "apps"
+      "footer";
+  }
+
+  h1 {
+    font-size: 28pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  h2 {
+    font-size: 18pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 155vh;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #designs .content {
+    height: 175vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #stickyNav {
+    display: none;
+  }
+
+  /* Hamburger Nav */
+  .hamburgerNav {
+    background-color: #303753;
+    width: 100%;
+    height: 50px;
+    padding: 1%;
+    color: white;
+    font-size: 200%;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .hamburgerNav #burger {
+    width: 35px;
+    height: 40px;
+    float: right;
+    padding: 0 2% 0 0;
+  }
+
+  .hamburgerNav #bar {
+    border-bottom: 3px solid rgba(255, 255, 255);
+    height: 10px;
+    width: 25px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    margin: 0 2% 0 0;
+  }
+
+  #burgerLinks {
+    display: none;
+    width: 33%;
+    background-color: #303753;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #burgerLinks li,
+  #burgerLinks li:first-of-type,
+  #burgerLinks li:last-of-type {
+    display: block;
+    padding: 0 0 5% 10%;
+  }
+
+  #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 10px;
+    width: 25px;
+    font-family: sans-serif;
+    font-size: 200%;
+  }
+
+  #burgerLinks li:nth-of-type(2) {
+    padding-top: 40px;
+  }
+
+  #burgerLinks a {
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+  }
+
+  /* About Section of Tablet */
+  #about {
+    grid-area: "about";
+    background-color: rgba(48, 55, 83, 0.5);
+    height: 85vh;
+  }
+
+  #headshot {
+    width: 33%;
+    height: auto;
+    float: left;
+    margin: 5% 5% 5% 0;
+  }
+
+  #about p {
+    margin: 0 1.5% 0 3%;
+    padding: 0 0 2% 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #2f3753;
+  }
+
+  #about p:first-of-type {
+    padding-top: 5%;
+  }
+
+  #about p:nth-of-type(2) {
+    display: none;
+  }
+
+  /* See More/Back to Top links */
+  #links {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    position: auto auto 15px auto;
+  }
+
+  /* Designs Section of Tablet */
+  #designs {
+    grid-area: "designs";
+    background-color: #aa8e66;
+    height: 175vh;
+  }
+
+  #designPreviews {
+    display: grid;
+    grid-template-areas:
+      "designLeft"
+      "designCenter"
+      "designRight";
+    align-content: space-between;
+  }
+
+  #designPreviews a {
+    background-color: #aa8e66;
+    margin: 3% auto;
+    width: 65vw;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.designLeft,
+  a.designCenter,
+  a.designRight {
+    text-decoration: none;
+    color: white;
+  }
+
+  .designPreview {
+    margin: 0;
+    width: 65vw;
+  }
+
+  .designPreview img {
+    margin: 2% 10%;
+  }
+
+  #photoshop {
+    padding: 2% 8%;
+  }
+
+  .designPreview p {
+    text-align: center;
+    width: 65vw;
+    margin: 0 0 3% 0;
+  }
+
+  /* Remove hover effect on preview cards */
+  .middle {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  /* Apps Section for Tablet */
+  #apps {
+    grid-area: "apps";
+    background-color: #68130e;
+    height: 137vh;
+  }
+
+  #appPreviews {
+    display: grid;
+    grid-template-areas:
+      "appLeft"
+      "appRight";
+    align-content: space-between;
+  }
+
+  #appPreviews a {
+    background-color: #68130e;
+    margin: 3% auto;
+    width: 65vw;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a.appLeft {
+    grid-area: "appLeft";
+    text-decoration: none;
+  }
+
+  a.appRight {
+    grid-area: "appRight";
+    text-decoration: none;
+  }
+
+  .appPreview {
+    width: 65vw;
+    margin: 0 auto;
+  }
+
+  .appPreview img {
+    margin: 3% 10% 2% 10%;
+  }
+
+  #weather {
+    margin: 3% 20% 2% 20%;
+  }
+
+  .appPreview p {
+    padding: 5%;
+    text-align: center;
+    color: white;
+  }
+
+  a.appLeft:hover div.appPreview,
+  a.appRight:hover div.appPreview {
+    opacity: 0.5;
+  }
+
+  a.appLeft:hover .middle,
+  a.appRight:hover .middle {
+    opacity: 1;
+  }
+
+  #caption {
+    font-size: 10pt;
+    color: rgba(211, 211, 211, 0.75);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  #footer {
+    grid-area: "footer";
+    background-color: #303753;
+    background-size: cover;
+    height: 30vh;
+    color: white;
+  }
+
+  #footer a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Styling for Desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #303753;
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "about"
+      "designs"
+      "apps"
+      "footer";
+  }
+
+  h1 {
+    font-size: 40pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  h2 {
+    font-size: 28pt;
+    color: #2f3753;
+    padding: 2% 10%;
+    text-align: center;
+    width: inherit;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 110vh;
+    padding: 10% 2% 2% 2%;
+  }
+
+  /* Navigation and Links */
+  nav {
+    grid-area: "nav";
+    width: 100%;
+    height: 99vh;
+    background-color: #2f3753;
+  }
+
+  ul {
+    float: left;
+    width: 25%;
+    height: inherit;
+  }
+
+  li {
+    list-style-type: none;
+    height: 14vh;
+    position: relative;
+  }
+
+  a {
+    font-family: serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f3753;
+  }
+
+  #navLinkAbout,
+  #navLinkDesigns,
+  #navLinkApps,
+  #navLinkPortfolio,
+  #navLinkContact {
+    width: 25%;
+    height: inherit;
+    font-size: 40pt;
+    color: white;
+    padding: 0 0 0 25px;
+    text-transform: none;
+  }
+
+  /* to veritcally center nav links in hero on home */
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* to vertically center block of links in hero on home */
+  li:first-of-type,
+  li:last-of-type {
+    height: 15vh;
+  }
+
+  /* Hamburger Nav */
+  .hamburgerNav {
+    display: none;
+  }
+
+  /* Navigation and Links on secondary pages */
+  .secondaryNav {
+    background-color: #303753;
+    width: 100%;
+    height: 70px;
+    padding: 1%;
+  }
+
+  .secondaryNav ul {
+    float: right;
+    width: 40%;
+  }
+
+  .secondaryNav li,
+  .secondaryNav li:first-of-type,
+  .secondaryNav li:last-of-type {
+    display: inline-block;
+    height: 10vh;
+    width: 24%;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  .secondaryNav a {
+    color: white;
+    font-size: 16pt;
+  }
+
+  /* Sticky Nav on Scroll */
+  #stickyNav {
+    background-color: #303753;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    padding: 1%;
+    visibility: hidden;
+  }
+
+  #stickyNav ul {
+    float: right;
+    width: 40%;
+  }
+
+  #stickyNav li,
+  #stickyNav li:first-of-type,
+  #stickyNav li:last-of-type {
+    display: inline-block;
+    height: 10vh;
+    width: 24%;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  #stickyNav a {
+    color: white;
+    font-size: 16pt;
+  }
+
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + #stickyNav {
+    padding-top: 10%;
+  }
+
+  /* Canvas for animation in hero on home */
+  #navCanvas {
+    width: 75%;
+    height: inherit;
+    float: left;
+  }
+
+  /* 
+  #blogIFrame {
+    width: 100vw;
+    height: 100vh;
+  }
+  */
+
+  /* About section on home */
+  #about {
+    grid-area: "about";
+    background-color: #303753;
+    background-size: cover;
+    height: 110vh;
+    float: left;
+  }
+
+  .about {
+    margin: 0 10%;
+    width: 80vw;
+    height: 80vh;
+  }
+
+  #about #headshot {
+    width: 200px;
+    height: auto;
+    position: relative;
+    margin: 6% 6% 6% 0;
+    padding: 10px 0;
+    float: left;
+  }
+
+  #about p {
+    margin: 0 1.5% 0 3%;
+    padding: 0 0 2% 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #2f3753;
+  }
+
+  /* Designs section on home */
+  #designs {
+    grid-area: "designs";
+    background-color: #aa8e66;
+    background-size: cover;
+    height: 110vh;
+  }
+
+  #designPreviews {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    height: 425px;
+    gap: 2vw;
+    grid-template-areas: "designLeft designCenter designRight";
+    align-content: space-between;
+  }
+
+  a.designLeft {
+    position: relative;
+    grid-area: "designLeft";
+    padding: 25px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  a.designCenter {
+    grid-area: "designCenter";
+    padding: 25px;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+  }
+
+  a.designRight {
+    grid-area: "designRight";
+    padding: 25px;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+  }
+
+  .designPreview {
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    justify-self: center;
+    background-color: white;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+  }
+
+  .designPreview img {
+    margin: 2% 25px;
+    border-radius: 5%;
+  }
+
+  #photoshop {
+    margin: 2% 56px;
+  }
+
+  .designPreview p {
+    padding: 5%;
+    text-align: center;
+    color: #303753;
+  }
+
+  a.designLeft:hover div.designPreview,
+  a.designCenter:hover div.designPreview,
+  a.designRight:hover div.designPreview {
+    opacity: 0.5;
+  }
+
+  a.designLeft:hover .middle,
+  a.designCenter:hover .middle,
+  a.designRight:hover .middle {
+    opacity: 1;
+  }
+
+  /* Hover effect on preview cards */
+  .middle {
+    width: inherit;
+    height: inherit;
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .text {
+    width: 450px;
+    height: 350px;
+    border-radius: 5%;
+    background-color: rgba(48, 55, 83, 0.5);
+    font-size: 18px;
+    padding: 42px 42px;
+    font-family: sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    color: white;
+  }
+
+  .text p {
+    display: block;
+    background-color: #303753;
+    padding: 42px 42px;
+    margin: 18%;
+  }
+
+  /* Apps section on home */
+  #apps {
+    grid-area: "apps";
+    background-color: #68130e;
+    background-size: cover;
+    height: 110vh;
+  }
+
+  #appPreviews {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 425px;
+    width: 80%;
+    gap: 5%;
+    grid-template-areas: "appLeft appRight";
+    align-content: space-between;
+    margin: 0 10%;
+    /* display: inline; */
+  }
+
+  a.appLeft {
+    position: relative;
+    grid-area: "appLeft";
+    padding: 25px;
+    /* width: 50%; */
+    align-self: center;
+    justify-self: center;
+  }
+
+  a.appRight {
+    grid-area: "appRight";
+    padding: 25px;
+    /* width: 50%; */
+    align-self: center;
+    justify-self: center;
+    position: relative;
+  }
+
+  .appPreview {
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    justify-self: center;
+    background-color: white;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+  }
+
+  .appPreview img {
+    margin: 2% 25px;
+    border-radius: 5%;
+  }
+
+  #weather {
+    margin: 2% 75px;
+  }
+
+  .appPreview p {
+    padding: 5%;
+    text-align: center;
+    color: #303753;
+  }
+
+  a.appLeft:hover div.appPreview,
+  a.appRight:hover div.appPreview {
+    opacity: 0.5;
+  }
+
+  a.appLeft:hover .middle,
+  a.appRight:hover .middle {
+    opacity: 1;
+  }
+
+  #caption {
+    font-size: 12pt;
+    color: lightgray;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  /* Footer section on home and secondary pages */
+  #footer {
+    grid-area: "footer";
+    background-color: #303753;
+    background-size: cover;
+    height: 30vh;
+    color: white;
+  }
+
+  /* See More/Back to Top links */
+  #links {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    position: auto auto 15px auto;
+  }
+
+  #resumePageContent {
+    width: 80%;
+    margin: 0 10% 3% 10%;
+  }
+
+  #resumePageContent h1 {
+    font-size: 28pt;
+    color: #303753;
+    padding: 2% 10%;
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+  }
+
+  #resumePageContent #feature {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0 5% 0 5%;
+  }
+
+  .contentPara {
+    /* padding: 5% 15%; */
+    margin: 0 1.5% 0 25%;
+    padding: 7.5% 0 0 0;
+    font-family: sans-serif;
+    font-size: 16pt;
+    color: #2f3753;
+  }
+
+  #battleshipLandingContent #feature,
+  #weatherLandingContent #feature,
+  #christmasTownLandingContent #feature,
+  #crsnLandingContent #feature,
+  #psLandingContent #feature {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0 5% 0 5%;
+  }
+
+  #battleshipLandingContent p.contentPara,
+  #weatherLandingContent p.contentPara,
+  #christmasTownLandingContent p.contentPara,
+  #crsnLandingContent p.contentPara,
+  #psLandingContent p.contentPara {
+    margin: 0;
+    padding: 2% 5%;
+  }
+
+  #breadcrumbs {
+    background-color: #aa8e66;
+    color: #303753;
+    font-size: 14pt;
+    padding: 0.5%;
+  }
+
+  #breadcrumbs a {
+    display: inline;
+    float: left;
+    color: #303753;
+    font-size: 14pt;
+  }
+
+  .gallery {
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  .gallery h2 {
+    width: 100%;
+  }
+
+  #gallery {
+    max-width: 100%;
+    height: auto;
+    margin: 2.5% auto;
+  }
+}

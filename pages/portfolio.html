@@ -14,19 +14,42 @@
   </head>
   
   <body>
-    <nav class="secondaryNav">
+    <div id="stickyNav">
       <ul>
-        <li><a href="../pages/index.html">Home</a></li>
-        <li><a href="../pages/resume.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">About</a></li>
+        <li><a href="portfolio.html" style="color: #aa8e66;">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="hamburgerNav">
+      MAMoore Designs
+      <a id="burger" onclick="toggle()">
+        <div id="bar"></div>
+        <div id="bar"></div>
+        <div id="bar"></div>
+      </a>
+      
+      <ul id="burgerLinks">
+        <li><a id="close" onclick="toggle()">X</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">About</a></li>
         <!-- <li><a>Designs</a></li>
         <li><a>Apps</a></li> -->
-        <li><a href="../pages/portfolio.html" style="color: #aa8e66;">Portfolio</a></li>
-        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="portfolio.html" style="color: #aa8e66;">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
+    </div>
+
+    
 
     <div id="designs">
       <div class="content">
+        <div id="breadcrumbs">
+          <a href="../../pages/index.html">Home</a> &nbsp; >  &nbsp;Portfolio
+        </div>
+        
         <h1> Designs </h1>
 
         <div id="designPreviews">
@@ -106,5 +129,8 @@
     <footer id="footer">
       <a href="blog.html">Blog</a>
     </footer> 
+
+    <script src="../js/index.js" type="text/javascript"></script>
+    
   </body>
 </html>
