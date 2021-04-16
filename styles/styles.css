@@ -1152,6 +1152,70 @@
     padding: 0 5% 0 5%;
   }
 
+  #contact .content {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #contact .content h1 {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  #contact p {
+    padding: 0 0 3% 0;
+  }
+
+  #contact form {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "label input"
+      "label input"
+      "label input"
+      "label input"
+      "label input";
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh;
+  }
+
+  #contact form label {
+    grid-area: "label";
+    font-size: larger;
+    margin: 1% 2% 1% 15%;
+    text-align: right;
+    color: #303753;
+    font-weight: 600;
+    padding-top: 2.5%;
+  }
+
+  #contact form select {
+    width: 50%;
+    border-bottom: #303753 2px solid;
+    margin-bottom: 5vh;
+    background-color: rgba(170, 142, 102, 0.5);
+  }
+
+  #contact form input {
+    grid-area: "input";
+    width: 50%;
+    border-bottom: #303753 2px solid;
+    margin-bottom: 5vh;
+    background-color: rgba(170, 142, 102, 0.5);
+    font-size: larger;
+    height: 8vh;
+  }
+
+  #contact form button {
+    grid-column: 1 / span 2;
+    font-weight: 400;
+    font-family: sans-serif;
+    border-radius: 0%;
+    width: 100%;
+    height: 15vh;
+    padding: 0 45%;
+    background-color: white;
+  }
+
   .contentPara {
     /* padding: 5% 15%; */
     margin: 0 1.5% 0 25%;
