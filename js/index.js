@@ -1,115 +1,115 @@
-//About Hover Animation
-var canvasSpace = document.getElementById("navCanvas");
-var canvas = document.createElement("canvas");
-var preview = document.createElement("div");
-preview.id = "designPreview";
-var context = canvas.getContext("2d");
-canvas.style.width = "79vw";
-canvas.style.height = "99vh";
-// let numberLog = [];
+// //About Hover Animation
+// var canvasSpace = document.getElementById("navCanvas");
+// var canvas = document.createElement("canvas");
+// var preview = document.createElement("div");
+// preview.id = "designPreview";
+// var context = canvas.getContext("2d");
+// canvas.style.width = "79vw";
+// canvas.style.height = "99vh";
+// // let numberLog = [];
 
-function fadeIn(drawing, preview, time) {
-    drawing.style.opacity = 0;
-    preview.style.opacity = 0;
+// function fadeIn(drawing, preview, time) {
+//     drawing.style.opacity = 0;
+//     preview.style.opacity = 0;
 
-    var last = +new Date();
-    var tick = function() {
-        drawing.style.opacity = +drawing.style.opacity + (new Date() - last) / time;
-        last = +new Date();
+//     var last = +new Date();
+//     var tick = function() {
+//         drawing.style.opacity = +drawing.style.opacity + (new Date() - last) / time;
+//         last = +new Date();
 
-        if (+drawing.style.opacity < 1) {  
-          (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-        }
-    };
+//         if (+drawing.style.opacity < 1) {  
+//           (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+//         }
+//     };
 
-    var tock = function() {
-        preview.style.opacity = +preview.style.opacity + (new Date() - last) / time;
-        last = +new Date();
+//     var tock = function() {
+//         preview.style.opacity = +preview.style.opacity + (new Date() - last) / time;
+//         last = +new Date();
 
-        if (+preview.style.opacity < 1) {  
-          (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-        }
-    };
+//         if (+preview.style.opacity < 1) {  
+//           (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+//         }
+//     };
 
-    tick();
-    tock();
-}
+//     tick();
+//     tock();
+// }
 
-document.getElementById("navLinkAbout").addEventListener(
-    "mouseenter", function() {
-        canvasSpace.appendChild(canvas);
-        canvas.style.backgroundImage = "url('../images/blueChevron.jpg')"
-        canvas.style.backgroundSize = "cover"
-        fadeIn(canvas, preview, 3000);
-});
+// document.getElementById("navLinkAbout").addEventListener(
+//     "mouseenter", function() {
+//         canvasSpace.appendChild(canvas);
+//         canvas.style.backgroundImage = "url('../images/blueChevron.jpg')"
+//         canvas.style.backgroundSize = "cover"
+//         fadeIn(canvas, preview, 3000);
+// });
 
-document.getElementById("navLinkAbout").addEventListener(
-    "mouseleave", function() {
-    canvasSpace.removeChild(canvas);
-    canvasSpace.removeChild(preview);
-});
+// document.getElementById("navLinkAbout").addEventListener(
+//     "mouseleave", function() {
+//     canvasSpace.removeChild(canvas);
+//     canvasSpace.removeChild(preview);
+// });
 
-//Design Hover Animation
-document.getElementById("navLinkDesigns").addEventListener(
-    "mouseenter", function() {
-        canvasSpace.appendChild(canvas);
-        canvas.style.backgroundImage = "url('../images/goldChevron.jpg')"
-        canvas.style.backgroundSize = "cover"
-        preview.style.visibility = "visible";
-        fadeIn(canvas, 3000);
-    })
+// //Design Hover Animation
+// document.getElementById("navLinkDesigns").addEventListener(
+//     "mouseenter", function() {
+//         canvasSpace.appendChild(canvas);
+//         canvas.style.backgroundImage = "url('../images/goldChevron.jpg')"
+//         canvas.style.backgroundSize = "cover"
+//         preview.style.visibility = "visible";
+//         fadeIn(canvas, 3000);
+//     })
 
-document.getElementById("navLinkDesigns").addEventListener("mouseleave", function() {
-        preview.style.visibility = "collapse";
-        canvasSpace.removeChild(canvas);
-    })
+// document.getElementById("navLinkDesigns").addEventListener("mouseleave", function() {
+//         preview.style.visibility = "collapse";
+//         canvasSpace.removeChild(canvas);
+//     })
 
-//Apps Hover Animation
-document.getElementById("navLinkApps").addEventListener(
-    "mouseenter", function() {
-        canvasSpace.appendChild(canvas);
-        canvas.style.backgroundImage = "url('../images/darkChevron.png')"
-        canvas.style.backgroundSize = "cover"
-        fadeIn(canvas, 3000);
-    })
+// //Apps Hover Animation
+// document.getElementById("navLinkApps").addEventListener(
+//     "mouseenter", function() {
+//         canvasSpace.appendChild(canvas);
+//         canvas.style.backgroundImage = "url('../images/darkChevron.png')"
+//         canvas.style.backgroundSize = "cover"
+//         fadeIn(canvas, 3000);
+//     })
 
-document.getElementById("navLinkApps").addEventListener("mouseleave", function() {
-        canvasSpace.removeChild(canvas);
-    })
+// document.getElementById("navLinkApps").addEventListener("mouseleave", function() {
+//         canvasSpace.removeChild(canvas);
+//     })
 
-//Portfolio Hover Animation 
-document.getElementById("navLinkPortfolio").addEventListener(
-    "mouseenter", function() {
-        canvasSpace.appendChild(canvas);
-        canvas.style.backgroundImage = "url('../images/redGoldChevron.jpg')"
-        canvas.style.backgroundSize = "cover"
-        fadeIn(canvas, 3000);
-    })
+// //Portfolio Hover Animation 
+// document.getElementById("navLinkPortfolio").addEventListener(
+//     "mouseenter", function() {
+//         canvasSpace.appendChild(canvas);
+//         canvas.style.backgroundImage = "url('../images/redGoldChevron.jpg')"
+//         canvas.style.backgroundSize = "cover"
+//         fadeIn(canvas, 3000);
+//     })
 
-document.getElementById("navLinkPortfolio").addEventListener("mouseleave", function() {
-        canvasSpace.removeChild(canvas);
-    })
+// document.getElementById("navLinkPortfolio").addEventListener("mouseleave", function() {
+//         canvasSpace.removeChild(canvas);
+//     })
 
-//Contact Hover Animation 
-document.getElementById("navLinkContact").addEventListener(
-    "mouseenter", function() {
-        canvasSpace.appendChild(canvas);
-        canvas.style.backgroundImage = "url('../images/blueGoldChevron.png')"
-        canvas.style.backgroundSize = "cover"
-        fadeIn(canvas, 3000);
-    })
+// //Contact Hover Animation 
+// document.getElementById("navLinkContact").addEventListener(
+//     "mouseenter", function() {
+//         canvasSpace.appendChild(canvas);
+//         canvas.style.backgroundImage = "url('../images/blueGoldChevron.png')"
+//         canvas.style.backgroundSize = "cover"
+//         fadeIn(canvas, 3000);
+//     })
 
-document.getElementById("navLinkContact").addEventListener("mouseleave", function() {
-        canvasSpace.removeChild(canvas);
-    })
+// document.getElementById("navLinkContact").addEventListener("mouseleave", function() {
+//         canvasSpace.removeChild(canvas);
+//     })
 
 //Create a sticky nav on home page scroll//
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("stickyNav");
-var about = document.getElementById("about")
+var about = document.getElementById("about");
 
-var sticky = about.offsetTop;
+var sticky = about.offsetTop - 1;
 header.style.visibility = "hidden";
 
 function myFunction() {
